@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <title>Query data use</title>
+  </head>
+  <body>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col pl-0 pr-0">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">Query data use</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </nav>
+        </div> <!-- end col -->
+      </div> <!-- end row -->
+
+      <div class="row">
+        <div class="col">
+          <h1 class="mt-4">
+            <small class="text-muted">Step 3 of 3 <br></small>
+            Select data users
+          </h1>
+
+          <form>
+
+            <div class="row">
+              <div class="col-sm-3 mt-3">
+                <div class="form-group">
+                  <label for="user_group">Select a user user group</label>
+                  <select class="form-control" id="user_group">
+                    <option value="">-- Select a user group --</option>
+                    <option value="">Line of business</option>
+                    <option value="geo_location">Geographic location</option>
+                    <option value="">Internal department</option>
+                    <option value="">Front / middle / back office</option>
+                    <option value="">Subsidiary</option>
+                    <option value="">External organisation</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="row" id="users-table" style="display:none;">
+              <div class="col-sm-6 mt3">
+                <fieldset class="mt-4">
+                  <legend>Select geographic location</legend>
+                </fieldset>
+
+                <input id="search_locations" type="text" class="form-control col-sm-8" placeholder="Search geographic locations">
+
+                <table class="table mt-3">
+                  <thead class="thead-light">
+                    <tr>
+                      <th scope="col"></th>
+                      <th scope="col">Address</th>
+                      <th scope="col">City</th>
+                      <th scope="col">Country</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="">
+                        </div>
+                      </td>
+                      <td>Av. Del Libertador 602</td>
+                      <td>Buenos Aires</td>
+                      <td>Argentina</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="">
+                        </div>
+                      </td>
+                      <td>101 Collins Street</td>
+                      <td>Melbourne</td>
+                      <td>Australia</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="">
+                        </div>
+                      </td>
+                      <td>77 St Georges Terrace</td>
+                      <td>Perth</td>
+                      <td>Australia</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="">
+                        </div>
+                      </td>
+                      <td>1 Farrer Place </td>
+                      <td>Sydney</td>
+                      <td>Australia</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="">
+                        </div>
+                      </td>
+                      <td>Square de Meeûs – 38/40</td>
+                      <td>Brussels</td>
+                      <td>Belgium</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="">
+                        </div>
+                      </td>
+                      <td>Leopoldo Couto Magalhães Junior 700</td>
+                      <td>Sao Paulo</td>
+                      <td>Brazil</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="">
+                        </div>
+                      </td>
+                      <td>Bankers Hall</td>
+                      <td>Calgary</td>
+                      <td>Canada</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="">
+                        </div>
+                      </td>
+                      <td>77 King Street West </td>
+                      <td>Toronto</td>
+                      <td>Canada</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="">
+                        </div>
+                      </td>
+                      <td>Avenida Apoquindo 3472</td>
+                      <td>Santiago</td>
+                      <td>Chile</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="">
+                        </div>
+                      </td>
+                      <td>Amaliegade 27</td>
+                      <td>Copenhagen</td>
+                      <td>Denmark</td>
+                    </tr>
+                    <tr style="display:none;">
+                      <td class="text-center">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="">
+                        </div>
+                      </td>
+                      <td>5 Avenue Kleber </td>
+                      <td>Paris</td>
+                      <td>France</td>
+                    </tr>
+                    <tr style="display:none;">
+                      <td class="text-center">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="">
+                        </div>
+                      </td>
+                      <td>Taunusanlage 9-10 </td>
+                      <td>Frankfurt</td>
+                      <td>Germany</td>
+                    </tr>
+                    <tr style="display:none;">
+                      <td class="text-center">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="">
+                        </div>
+                      </td>
+                      <td>25 Shoe Lane</td>
+                      <td>London</td>
+                      <td>UK</td>
+                    </tr>
+                    <tr style="display:none;">
+                      <td class="text-center">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="">
+                        </div>
+                      </td>
+                      <td>200 West St.</td>
+                      <td>New York</td>
+                      <td>USA</td>
+                    </tr>
+                    <tr style="display:none;">
+                      <td class="text-center">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="">
+                        </div>
+                      </td>
+                      <td>100 Crescent Ct</td>
+                      <td>Dallas</td>
+                      <td>USA</td>
+                    </tr>
+                    <tr style="display:none;">
+                      <td class="text-center">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="">
+                        </div>
+                      </td>
+                      <td>100 Crescent Ct</td>
+                      <td>Dallas</td>
+                      <td>USA</td>
+                    </tr>
+                    <tr style="display:none;">
+                      <td class="text-center">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="">
+                        </div>
+                      </td>
+                      <td>222 S Main St</td>
+                      <td>Salt Lake City</td>
+                      <td>USA</td>
+                    </tr>
+                    <tr style="display:none;">
+                      <td class="text-center">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="">
+                        </div>
+                      </td>
+                      <td>555 California St</td>
+                      <td>San Francisco</td>
+                      <td>USA</td>
+                    </tr>
+                    <tr style="display:none;">
+                      <td class="text-center">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="">
+                        </div>
+                      </td>
+                      <td>200 S Biscayne Blvd</td>
+                      <td>Miami</td>
+                      <td>USA</td>
+                    </tr>
+                    <tr style="display:none;">
+                      <td class="text-center">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="">
+                        </div>
+                      </td>
+                      <td>719 2nd Ave</td>
+                      <td>Seattle</td>
+                      <td>USA</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <nav aria-label="Page navigation">
+                  <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">...</a></li>
+                    <li class="page-item"><a class="page-link" href="#">8</a></li>
+                    <li class="page-item"><a class="page-link" href="#">9</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+
+              </div>
+            </div>
+
+            <div class="row" style="display:none;">
+              <div class="col-sm-6 mt-5 mb-5">
+                <a href="answer.html" class="btn btn-primary btn-lg btn-block" type="submit">Submit your data query</a>
+              </div>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+    </div> <!-- end container-fluid -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+
+        // show users table when user group selected
+        // uses geographic location as example
+        $("#user_group").on('change', function() {
+          if ($(this).val() == "geo_location"){
+            $("#users-table").fadeIn();
+          }
+          else {
+            $("#users-table").fadeOut();
+          }
+        });
+
+        // filter table as you type a search query
+        function filter(element) {
+            var value = $(element).val().toUpperCase();
+            $("tbody > tr").each(function() {
+              if ($(this).text().toUpperCase().search(value) > -1) {
+                $(this).fadeIn();
+              }
+              else {
+                $(this).fadeOut();
+              }
+            });
+        }
+
+        $("#search_locations").keyup(function(){
+          filter(this);
+        });
+
+        // show submit button when user is selected
+        var counter = 0;
+        $('td input[type="checkbox"]').change(function(){
+          if ($(this).is(':checked')) {
+            counter++;
+          }
+          else {
+            counter--;
+          }
+          if (counter == 1 || counter > 1) {
+            $(".btn-primary").closest(".row").fadeIn();
+          }
+          else {
+            $(".btn-primary").closest(".row").fadeOut();
+          }
+        });
+
+      });
+    </script>
+  </body>
+</html>

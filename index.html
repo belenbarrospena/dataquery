@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <title>Query data use</title>
+  </head>
+  <body>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col pl-0 pr-0">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Query data use</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </nav>
+        </div> <!-- end col -->
+      </div> <!-- end row -->
+
+      <div class="row">
+        <div class="col">
+          <h1 class="mt-4">
+            <small class="text-muted">Step 1 of 3 <br></small>
+            Select actions and purposes
+          </h1>
+
+          <form>
+            <div class="row">
+              <div class="col-sm-3 mt-3">
+                <div class="form-group">
+                  <label for="action1">What do you want to do with the data?</label>
+                  <select class="form-control" id="action1">
+                    <option value="empty">-- Select an action --</option>
+                    <option value="distribute">Distribute</option>
+                    <option value="store">Store</option>
+                    <option value="display">Display use</option>
+                    <option value="trade_automatically">Trade automatically</option>
+                    <option value="derive">Derive</option>
+                    <option value="nondisplay">Other non-display uses</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="row" id="consumers" style="display:none;">
+              <div class="col-sm-3 mt-3">
+                <label>Consumer type:</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="consumer_type" id="internal" value="internal" checked>
+                  <label class="form-check-label" for="internal">
+                    Internal
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="consumer_type" id="external" value="external">
+                  <label class="form-check-label" for="external">
+                    External
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="consumer_type" id="service_facilitators" value="service_facilitators">
+                  <label class="form-check-label" for="service_facilitators">
+                    External service facilitators
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row" id="select_display_type" style="display:none;">
+              <div class="col-sm-3 mt-3">
+                <label>Select the type of display:</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="display_type" id="device" value="device" checked>
+                  <label class="form-check-label" for="device">
+                    Device (individual display)
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="display_type" id="wallboard" value="wallboard">
+                  <label class="form-check-label" for="wallboard">
+                    Wallboard (group display)
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row" id="select_derivation_type" style="display:none;">
+              <div class="col-sm-3 mt-3">
+                <label>Specify the nature of your derivations:</label>
+                <div class="form-check mt-1 derive">
+                  <input class="form-check-input" type="checkbox" value="" id="irreversible">
+                  <label class="form-check-label" for="irreversible">
+                    Derivations will be irreversible
+                  </label>
+                </div>
+                <div class="form-check mt-1 derive">
+                  <input class="form-check-input" type="checkbox" value="" id="non-substitutive">
+                  <label class="form-check-label" for="non-substitutive">
+                    Derivations will be non-substitutive
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row" id="purposes" style="display:none;">
+              <div class="col-sm-4 mt-3">
+                <label>For what purposes will you be using the data?</label>
+                <div class="form-check mt-1 derive">
+                  <input class="form-check-input" type="checkbox" value="" id="trading">
+                  <label class="form-check-label" for="index">
+                    Trading
+                  </label>
+                </div>
+                <div class="form-check mt-1 nondisplay derive">
+                  <input class="form-check-input" type="checkbox" value="" id="index">
+                  <label class="form-check-label" for="index">
+                    Calculating index
+                  </label>
+                </div>
+                <div class="form-check mt-1 nondisplay derive">
+                  <input class="form-check-input" type="checkbox" value="" id="traded_product">
+                  <label class="form-check-label" for="traded_product">
+                    Creating traded product
+                  </label>
+                </div>
+                <div class="form-check mt-1 nondisplay trade_automatically">
+                  <input class="form-check-input" type="checkbox" value="" id="platform_trading">
+                  <label class="form-check-label" for="platform_trading">
+                    Platform trading
+                  </label>
+                </div>
+                <div class="form-check mt-1 nondisplay trade_automatically">
+                  <input class="form-check-input" type="checkbox" value="" id="principal">
+                  <label class="form-check-label" for="principal">
+                    Trading as principal
+                  </label>
+                </div>
+                <div class="form-check mt-1 nondisplay trade_automatically">
+                  <input class="form-check-input" type="checkbox" value="" id="brokerage">
+                  <label class="form-check-label" for="brokerage">
+                    Brokerage
+                  </label>
+                </div>
+                <div class="form-check mt-1 display">
+                  <input class="form-check-input" type="checkbox" value="" id="training">
+                  <label class="form-check-label" for="training">
+                    Training
+                  </label>
+                </div>
+                <div class="form-check mt-1 display">
+                  <input class="form-check-input" type="checkbox" value="" id="support">
+                  <label class="form-check-label" for="support">
+                    Technical support
+                  </label>
+                </div>
+                <div class="form-check mt-1 display">
+                  <input class="form-check-input" type="checkbox" value="" id="qa">
+                  <label class="form-check-label" for="qa">
+                    Quality assurance
+                  </label>
+                </div>
+                <div class="form-check mt-1 display">
+                  <input class="form-check-input" type="checkbox" value="" id="product_development">
+                  <label class="form-check-label" for="product_development">
+                    Product development
+                  </label>
+                </div>
+                <div class="form-check mt-1 display">
+                  <input class="form-check-input" type="checkbox" value="" id="direct_marketing">
+                  <label class="form-check-label" for="direct_marketing">
+                    Direct marketing
+                  </label>
+                </div>
+                <div class="form-check mt-1 display">
+                  <input class="form-check-input" type="checkbox" value="" id="marketing_demonstrations">
+                  <label class="form-check-label" for="marketing_demonstrations">
+                    Public marketing demonstrations
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-4" id="action2_row" style="display:none;">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="action2">What do you want to do with the data?</label>
+                  <div class="form-row">
+                    <div class="col">
+                      <select class="form-control" id="action2">
+                        <option value="empty">-- Select an action --</option>
+                        <option value="action">Distribute</option>
+                        <option value="action">Display</option>
+                        <option value="action">Trade automatically</option>
+                        <option value="action">Derive</option>
+                      </select>
+                    </div>
+                    <div class="col mt-2">
+                      <a href="#" id="delete_action">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#bd2130" class="bi bi-trash" viewBox="0 0 16 16">
+                          <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                          <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row" id="add_action" style="display:none;">
+              <div class="col-sm-3 mt-4">
+                <button type="button" class="btn btn-outline-secondary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                  </svg>
+                  Add another action
+                </button>
+              </div>
+            </div>
+
+            <div class="row" id="continue" style="display:none;">
+              <div class="col-sm-4 mt-5 mb-5">
+                <a href="assets.html" class="btn btn-primary btn-lg btn-block" type="submit">Continue to asset selection</a>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div> <!-- end container-fluid -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+
+        // action selection
+        $("#action1").on('change', function() {
+          $("#purposes").hide();
+          if ($(this).val() == "distribute"){
+            $("#consumers").fadeIn();
+            $("#add_action, #continue").fadeIn();
+          }
+          else {
+            $("#consumers, #add_action, #continue").fadeOut();
+          }
+          if ($(this).val() == "display" ){
+            $("#select_display_type, #purposes").fadeIn(function(){
+              $('#purposes .form-check').each(function(){
+                if ($(this).hasClass("display")){
+                  $(this).show();
+                }
+                else {
+                  $(this).hide();
+                }
+              });
+            });
+          }
+          else {
+            $("#select_display_type").fadeOut();
+          }
+          if ($(this).val() == "nondisplay") {
+            $("#purposes").fadeIn(function(){
+              $('#purposes .form-check').each(function(){
+                if ($(this).hasClass("nondisplay")){
+                  $(this).show();
+                }
+                else {
+                  $(this).hide();
+                }
+              });
+            });
+          }
+          if ($(this).val() == "trade_automatically") {
+            $("#purposes").fadeIn(function(){
+              $('#purposes .form-check').each(function(){
+                if ($(this).hasClass("trade_automatically")){
+                  $(this).show();
+                }
+                else {
+                  $(this).hide();
+                }
+              });
+            });
+          }
+          if ($(this).val() == "derive" ){
+            $("#select_derivation_type, #purposes").fadeIn(function(){
+              $('#purposes .form-check').each(function(){
+                if ($(this).hasClass("derive")){
+                  $(this).show();
+                }
+                else {
+                  $(this).hide();
+                }
+              });
+            });
+          }
+          else {
+            $("#select_derivation_type").fadeOut();
+          }
+        });
+
+        // check if data will be received by consumers or service facilitators
+        $('#distribute_recipients input[type="radio"]').change(function() {
+          checkRecipients();
+          checkConsumerType();
+        });
+
+        // check if the consumer type is internal or external
+        $('#distribute_consumer_type input[type="radio"]').change(function() {
+          checkConsumerType();
+        });
+
+        // show buttons when at least one purpose is selected
+        var counter = 0;
+
+        $('#purposes input[type="checkbox"]').change(function(){
+          var anyBoxesChecked = false;
+          $('#purposes input[type="checkbox"]').each(function(){
+            if ($(this).is(":checked")) {
+                counter++;
+                anyBoxesChecked = true;
+            }
+          })
+          if (anyBoxesChecked == false) {
+            $("#add_action, #continue").fadeOut();
+          }
+          if (counter == 1) {
+            $("#add_action, #continue").fadeIn();
+          }
+          else {
+          }
+          counter = 0;
+        });
+
+        // add action
+        $("#add_action").click(function(){
+          $("#action2_row").fadeIn();
+          $(this).hide();
+        });
+
+        $("#delete_action").click(function(){
+          $("#action2_row").fadeOut();
+          $("#add_action").fadeIn();
+        });
+
+      });
+    </script>
+  </body>
+</html>
