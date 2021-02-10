@@ -254,10 +254,10 @@
             $("#add_action, #continue").fadeIn();
           }
           else {
-            $("#consumers, #add_action, #continue").fadeOut();
+            $("#consumers").fadeOut();
           }
           if ($(this).val() == "display" ){
-            $("#select_display_type, #purposes").fadeIn(function(){
+            $("#select_display_type, #purposes, #add_action, #continue").fadeIn(function(){
               $('#purposes .form-check').each(function(){
                 if ($(this).hasClass("display")){
                   $(this).show();
@@ -272,7 +272,7 @@
             $("#select_display_type").fadeOut();
           }
           if ($(this).val() == "nondisplay") {
-            $("#purposes").fadeIn(function(){
+            $("#purposes, #add_action, #continue").fadeIn(function(){
               $('#purposes .form-check').each(function(){
                 if ($(this).hasClass("nondisplay")){
                   $(this).show();
@@ -284,7 +284,7 @@
             });
           }
           if ($(this).val() == "trade_automatically") {
-            $("#purposes").fadeIn(function(){
+            $("#purposes. #add_action, #continue").fadeIn(function(){
               $('#purposes .form-check').each(function(){
                 if ($(this).hasClass("trade_automatically")){
                   $(this).show();
@@ -296,7 +296,7 @@
             });
           }
           if ($(this).val() == "derive" ){
-            $("#select_derivation_type, #purposes").fadeIn(function(){
+            $("#select_derivation_type, #purposes, #add_action, #continue").fadeIn(function(){
               $('#purposes .form-check').each(function(){
                 if ($(this).hasClass("derive")){
                   $(this).show();
@@ -324,26 +324,26 @@
         });
 
         // show buttons when at least one purpose is selected
-        var counter = 0;
+        // var counter = 0;
 
-        $('#purposes input[type="checkbox"]').change(function(){
-          var anyBoxesChecked = false;
-          $('#purposes input[type="checkbox"]').each(function(){
-            if ($(this).is(":checked")) {
-                counter++;
-                anyBoxesChecked = true;
-            }
-          })
-          if (anyBoxesChecked == false) {
-            $("#add_action, #continue").fadeOut();
-          }
-          if (counter == 1) {
-            $("#add_action, #continue").fadeIn();
-          }
-          else {
-          }
-          counter = 0;
-        });
+        // $('#purposes input[type="checkbox"]').change(function(){
+          // var anyBoxesChecked = false;
+          // $('#purposes input[type="checkbox"]').each(function(){
+            // if ($(this).is(":checked")) {
+                // counter++;
+                // anyBoxesChecked = true;
+            // }
+          // })
+          // if (anyBoxesChecked == false) {
+            // $("#add_action, #continue").fadeOut();
+          // }
+          // if (counter == 1) {
+            // $("#add_action, #continue").fadeIn();
+          // }
+          // else {
+          // }
+          // counter = 0;
+        // });
 
         // add action
         $("#add_action").click(function(){
